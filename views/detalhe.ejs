@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Cliente</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Detalhes do Cliente</h2>
+        <div class="card">
+            <img src="<%= cliente.foto %>" class="card-img-top" alt="<%= cliente.nome %>">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <%= cliente.nome %>
+                </h5>
+
+                <p><strong>Email:</strong>
+                    <%= cliente.email %>
+                </p>
+                <p><strong>Telefone:</strong>
+                    <%= cliente.telefone %>
+                </p>
+
+                <p><strong>Endereço:</strong></p>
+                <ul>
+                    <li><strong>Rua:</strong>
+                        <%= cliente.rua %>
+                    </li>
+                    <li><strong>Bairro:</strong>
+                        <%= cliente.bairro %>
+                    </li>
+                    <li><strong>Estado:</strong>
+                        <%= cliente.estado %>
+                    </li>
+                    <li><strong>Número da Casa:</strong>
+                        <%= cliente.numero %>
+                    </li>
+                    <% if (cliente.complemento) { %>
+                        <li><strong>Complemento:</strong>
+                            <%= cliente.complemento %>
+                        </li>
+                        <% } %>
+                </ul>
+
+                <a href="/cadastros" class="btn btn-primary mt-3">Voltar para a Lista de Clientes</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

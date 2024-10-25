@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Lista de Cadastros</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Lista de Clientes</h2>
+        <div class="row">
+            <% clientes.forEach(cliente=> { %>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="<%= cliente.foto %>" class="card-img-top" alt="<%= cliente.nome %>">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= cliente.nome %>
+                            </h5>
+                            <a href="/cadastro/<%= cliente.id %>" class="btn btn-primary">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+</body>
+
+</html>
